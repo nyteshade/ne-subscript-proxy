@@ -1,0 +1,38 @@
+{
+  "name": "@nejs/subscript-proxy",
+  "version": "1.0",
+  "description": "A simple reusable proxy to allow custom subscript access",
+  "main": "dist/subscriptproxy.js",
+  "scripts": {
+    "build": "node bin/build.mjs",
+    "test": "npm run build && vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:nyteshade/ne-subscript-proxy.git"
+  },
+  "keywords": [
+    "Proxy",
+    "Subscript",
+    "JavaScript",
+    "MJS"
+  ],
+  "author": "Brielle Harrison",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nyteshade/ne-subscript-proxy/issues"
+  },
+  "homepage": "https://github.com/nyteshade/ne-subscript-proxy#readme",
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "require": "./dist/subscriptproxy.js",
+      "import": "./dist/subscriptproxy.mjs",
+      "default": "./dist/subscriptproxy.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.9"
+  }
+}

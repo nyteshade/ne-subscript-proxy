@@ -38,7 +38,7 @@ served version of the latest build
 ```
 
 Or if you want it to automatically be injected into the window,
-you can use the iffy variant.
+you can use the iife variant.
 
 ```html
 <script src="'https://cdn.jsdelivr.net/gh/nyteshade/ne-subscript-proxy@main/dist/subscriptproxy.js'"></script>

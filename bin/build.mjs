@@ -3,7 +3,7 @@ const { readFile, writeFile } = await import('fs/promises')
 try {
   const packageName = 'SubscriptProxy'
   const filename = 'subscriptproxy'
-  
+
   const sourceCode = await readFile(`./src/${filename}.js`)
   const bufferToString = buffer => buffer.toString()
 
@@ -18,29 +18,29 @@ try {
       modulejs(packageName),
     ].map(bufferToString).join('\n'),
 
-    iffyjs: [
-      iffyjs(packageName, sourceCode),
+    iifejs: [
+      iifejs(packageName, sourceCode),
     ].map(bufferToString).join('\n'),
   }
 
   await writeFile(`./dist/${filename}.js`, files.commonjs)
   await writeFile(`./dist/${filename}.mjs`, files.modulejs)
-  await writeFile(`./dist/${filename}.browser.js`, files.iffyjs)
+  await writeFile(`./dist/${filename}.browser.js`, files.iifejs)
 }
 catch (error) {
   console.error(error)
 }
-  
+
 function commonjs(packageName) {
   return [
     'module.exports = {',
     `  default: ${packageName},`,
     `  ${packageName}`,
     `}`
-  ].join('\n')  
+  ].join('\n')
 }
 
-function iffyjs(packageName, sourceCode) {
+function iifejs(packageName, sourceCode) {
   return [
     '(function () {',
       '',

@@ -1,6 +1,6 @@
 {
   "name": "@nejs/subscript-proxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple reusable proxy to allow custom subscript access",
   "main": "dist/subscriptproxy.js",
   "scripts": {

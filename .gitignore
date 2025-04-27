@@ -131,3 +131,4 @@ out
 # IDE settings
 .vscode
 .cursor
+package-lock.json
